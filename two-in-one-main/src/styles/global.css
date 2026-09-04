@@ -1,0 +1,131 @@
+/* ── Design Tokens ─────────────────────────────────── */
+:root {
+  --clr-bg:        #F7F5F0;
+  --clr-surface:   #FFFFFF;
+  --clr-border:    #E2DED6;
+  --clr-text:      #1A1814;
+  --clr-muted:     #7A7670;
+  --clr-accent1:   #1D6B8A;   /* Doctor — deep teal */
+  --clr-accent1-l: #E1F4FB;
+  --clr-accent2:   #7B3FA8;   /* Play Zone — purple */
+  --clr-accent2-l: #F3EAFB;
+  --clr-nav-bg:    #1A1814;
+  --clr-nav-text:  #F7F5F0;
+
+  --radius-card:   20px;
+  --radius-badge:  8px;
+  --shadow-card:   0 4px 24px rgba(0,0,0,0.08);
+  --shadow-hover:  0 12px 40px rgba(0,0,0,0.16);
+  --transition:    0.3s ease;
+
+  --font-display:  'Syne', sans-serif;
+  --font-body:     'DM Sans', sans-serif;
+}
+
+/* ── Reset ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+
+img { display: block; max-width: 100%; }
+
+/* ── Utility ────────────────────────────────────────── */
+.container {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #020617 !important; /* The Deep Dark Background */
+  color: #f8fafc !important;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* The Glowing Light Orbs in the background */
+body::before {
+  content: '';
+  position: fixed;
+  top: -20%; left: -10%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -20%; right: -10%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 60%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Fixes the scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+/* --- PREMIUM LIVE WALLPAPER EFFECTS --- */
+.live-wallpaper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background-color: #020617; /* Deep midnight */
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.8);
+  animation: floatUp infinite linear;
+}
+
+/* Make half the particles purple */
+.particle:nth-child(even) {
+  background: #c084fc;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(110vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+    transform: translateY(90vh) scale(1);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(0);
+    opacity: 0;
+  }
+}

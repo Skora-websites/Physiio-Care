@@ -1,0 +1,519 @@
+/* --- Global Resets & Utilities --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+body { background-color: #ffffff; color: #1e293b; overflow-x: hidden; }
+a { text-decoration: none; }
+ul { list-style: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.position-relative { position: relative; }
+.mt-4 { margin-top: 1.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+
+:root {
+  --clr-cyan: #2CB5E8;
+  --clr-maroon: #A12B5E;
+  --clr-dark: #0f172a;
+  --clr-gray: #64748b;
+}
+
+.text-cyan { color: var(--clr-cyan); }
+.text-maroon { color: var(--clr-maroon); }
+
+/* Headers & Text */
+.subtitle {
+  color: var(--clr-maroon);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+h2 { font-size: 2.8rem; color: var(--clr-dark); line-height: 1.2; margin-bottom: 15px; }
+p { color: var(--clr-gray); line-height: 1.7; font-size: 1.05rem; }
+
+/* Exact Buttons */
+.btn-round { border-radius: 50px !important; }
+
+.btn-primary {
+  background-color: var(--clr-maroon);
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s;
+}
+.btn-primary:hover { background-color: #831245; color: white; }
+
+.btn-cyan {
+  background-color: var(--clr-cyan);
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--clr-dark);
+  border: 2px solid #e2e8f0;
+  padding: 12px 30px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-video {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+.btn-video:hover { transform: scale(1.1); }
+
+/* --- 1. Top Bar --- */
+.top-bar {
+  background-color: #1a202c; 
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  padding: 12px 0;
+  width: 100%;
+}
+.top-bar-inner { display: flex; justify-content: space-between; align-items: center; }
+.top-left, .top-right { display: flex; align-items: center; gap: 15px; }
+
+/* --- 2. Curved Navbar ON Top of Hero --- */
+.navbar-wrapper {
+  position: absolute; /* Allows it to sit on top of the hero image */
+  top: 60px; /* Sits just below the top bar */
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  background: #ffffff;
+  border-radius: 50px; /* Curved edges */
+  padding: 15px 30px;
+  width: 95%;
+  max-width: 1200px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.logo-img { height: 45px; }
+.nav-links { display: flex; gap: 35px; align-items: center; }
+.nav-links a { color: var(--clr-dark); font-weight: 700; font-size: 1rem; }
+.nav-links a:hover, .nav-links a.active { color: var(--clr-cyan); }
+
+/* --- 3. Hero Section (Clear Image & Left-Aligned Text) --- */
+.hero {
+  /* REMOVED the solid white block. 
+     The image now covers the ENTIRE area from edge to edge.
+     Added a very faint 40% frost strictly behind the text so you can still read the dark letters. */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 50%), 
+              url('https://images.unsplash.com/photo-1574406280735-351fc1a7c5e0?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center; /* Centered to show the whole subject properly */
+  background-repeat: no-repeat;
+  padding: 180px 0 140px 0; 
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+/* FORCES the container to align its children to the left */
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero-content { 
+  max-width: 600px; 
+  text-align: left; 
+  /* Forces the box itself to stay on the left margin */
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.hero-content h1 { font-size: 4.2rem; margin-bottom: 25px; text-align: left; }
+.hero-content p { margin-bottom: 40px; font-size: 1.15rem; max-width: 90%; text-align: left; }
+.hero-actions { display: flex; align-items: center; gap: 20px; justify-content: flex-start; }
+
+/* The Overlapping 15 Years Box */
+.experience-box {
+  position: absolute;
+  bottom: -40px;
+  right: 50px;
+  background: var(--clr-maroon);
+  padding: 30px 40px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 20px 40px rgba(161, 43, 94, 0.3);
+}
+.experience-box h2 { font-size: 4.5rem; margin: 0; color: white; line-height: 1; }
+.experience-box p { color: white; font-weight: 700; font-size: 1rem; margin: 0; }
+
+/* --- 4. About Section (Image inside Card/Strip) --- */
+.about-section { padding: 120px 20px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+/* The Card Frame for the Image */
+.about-image-card {
+  background: white;
+  padding: 15px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border: 1px solid #e2e8f0;
+}
+.img-fluid { width: 100%; height: auto; object-fit: cover; }
+.rounded-image { border-radius: 16px; }
+
+.quote-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--clr-cyan);
+  padding: 30px;
+  margin-top: 30px;
+}
+.quote-box p { font-style: italic; color: var(--clr-dark); margin-bottom: 15px; font-size: 1.1rem; }
+.quote-box h4 { color: var(--clr-maroon); margin-bottom: 5px; }
+
+/* --- 5. Services Section --- */
+.services-section { background: #f8fafc; padding: 120px 0; }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; }
+.header-text { max-width: 600px; text-align: left; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+/* --- UPDATED SERVICE CARDS FOR IMAGES --- */
+.service-card {
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.3s;
+  border: 1px solid #e2e8f0;
+  overflow: hidden; /* Keeps the image inside the curved borders */
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08); 
+  border-color: var(--clr-cyan); 
+}
+
+/* New styling for the actual image */
+.service-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.service-content {
+  padding: 30px 30px 80px 30px; /* Extra bottom padding for the button */
+}
+
+.service-content h3 { font-size: 1.4rem; margin-bottom: 12px; color: var(--clr-dark); }
+.service-content p { color: var(--clr-gray); line-height: 1.6; }
+
+.service-link { 
+  position: absolute; 
+  bottom: 30px; 
+  right: 30px; 
+  background: #f1f5f9; 
+  color: var(--clr-dark); 
+  width: 45px; 
+  height: 45px; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  transition: 0.3s; 
+}
+
+.service-card:hover .service-link { 
+  background: var(--clr-cyan); 
+  color: white; 
+}
+/* Ensure the image fits inside the card without breaking it */
+.service-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.service-content {
+  padding: 30px 30px 80px 30px; 
+}
+/* =========================================
+   6. INTERNAL PAGE HEADERS (Banners)
+========================================= */
+.internal-header {
+  padding: 180px 0 100px 0; /* Massive top padding so the curved navbar floats over it perfectly */
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.internal-header h1 { 
+  color: white !important; 
+  font-size: 3.5rem; 
+  margin-bottom: 15px; 
+  text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.internal-header p { 
+  color: #e2e8f0 !important; 
+  font-size: 1.1rem; 
+  letter-spacing: 1px; 
+}
+
+/* Specific background image for the main "All Services" page */
+.services-header-bg {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+                    url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* =========================================
+   7. BOOKING FORM STYLES
+========================================= */
+/* Specific background image for the "Book Appointment" header */
+.booking-header-bg {
+  background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+                    url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80');
+}
+/* =========================================
+   7. BOOKING FORM STYLES
+========================================= */
+.booking-section {
+  /* --- Update: Add Background Image --- */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), /* Light overlay for form readability */
+    url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80'); /* Relevant royalty-free clinic image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* ----------------------------------- */
+  padding: 100px 20px;
+}
+
+.booking-card {
+  /* Ensure the form card has its own clean background and pops out */
+  background: white;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Increased shadow for better depth against the background */
+  border: 1px solid #e2e8f0;
+}
+/* ... keep the rest of your form grid, group, control, and submit button styles ... */
+
+.form-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 25px; 
+  margin-bottom: 25px; 
+}
+
+.form-group { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  text-align: left; 
+}
+
+.form-group label { 
+  font-weight: 700; 
+  color: var(--clr-dark); 
+  font-size: 0.95rem; 
+}
+
+.form-control { 
+  padding: 16px; 
+  border: 2px solid #e2e8f0; 
+  border-radius: 12px; 
+  font-size: 1rem; 
+  color: var(--clr-dark); 
+  transition: all 0.3s ease; 
+  background: #f8fafc; 
+  font-family: inherit;
+}
+
+.form-control:focus { 
+  outline: none; 
+  border-color: var(--clr-cyan); 
+  box-shadow: 0 0 0 4px rgba(44, 181, 232, 0.15); 
+  background: white; 
+}
+
+textarea.form-control { 
+  resize: vertical; 
+  min-height: 150px; 
+}
+
+.btn-submit { 
+  background: var(--clr-maroon); 
+  color: white; 
+  width: 100%; 
+  padding: 18px; 
+  border: none; 
+  border-radius: 12px; 
+  font-size: 1.1rem; 
+  font-weight: 700; 
+  cursor: pointer; 
+  transition: 0.3s; 
+  margin-top: 10px; 
+}
+
+.btn-submit:hover { 
+  background: #831245; 
+  transform: translateY(-3px); 
+  box-shadow: 0 15px 30px rgba(161, 43, 94, 0.25); 
+}
+
+@media (max-width: 768px) { 
+  .form-grid { grid-template-columns: 1fr; } 
+  .booking-card { padding: 30px 20px; } 
+}
+/* =========================================
+   8. FOOTER STYLES
+========================================= */
+.footer {
+  background-color: #0f172a; /* Deep midnight blue */
+  color: #94a3b8;
+  padding: 80px 0 0 0;
+  border-top: 4px solid var(--clr-maroon);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1); /* Makes the logo white for the dark background */
+}
+
+.footer-desc {
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: var(--clr-cyan);
+  transform: translateY(-3px);
+}
+
+.footer-title {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--clr-maroon);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--clr-cyan);
+  padding-left: 5px;
+}
+
+.footer-contact {
+  list-style: none;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  background: #020617;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.credit strong {
+  color: var(--clr-cyan);
+}
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .bottom-inner { flex-direction: column; gap: 10px; text-align: center; }
+}

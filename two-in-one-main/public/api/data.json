@@ -1,0 +1,82 @@
+{
+  "homeCards": [
+    {
+      "id": "doctor",
+      "themeClass": "doc",
+      "iconEmoji": "🩺",
+      "title": "Dr. Preeti Choudhary",
+      "description": "Expert physiotherapist in Ghaziabad with 13+ years experience.",
+      "stats": [
+        { "val": "13+", "label": "Years" },
+        { "val": "500+", "label": "Patients" },
+        { "val": "4.9★", "label": "Rated" }
+      ],
+      "btnText": "Book Visit",
+      "label": "Healthcare Portal",
+      "link": "/doctor"
+    },
+    {
+      "id": "play-zone",
+      "themeClass": "play",
+      "iconEmoji": "🎉",
+      "title": "Let's Play Zone",
+      "description": "Premium birthday parties & 30+ fun activities for kids.",
+      "stats": [
+        { "val": "30+", "label": "Activities" },
+        { "val": "5K+", "label": "Parties" },
+        { "val": "4.8★", "label": "Rated" }
+      ],
+      "btnText": "Book Party",
+      "label": "Play Zone Portal",
+      "link": "/play-zone"
+    }
+  ],
+  "doctorPage": {
+    "title": "Physio Care - Advanced Physiotherapy Clinic",
+    "heroImage": "https://images.unsplash.com/photo-1588286840104-14285b51c14d?auto=format&fit=crop&q=80&w=1200",
+    "about": "Welcome to Physio Care. We are dedicated to providing the highest quality of physiotherapy in Crossings Republik. Our expert team focuses on relieving pain, restoring function, and preventing future injuries.",
+    "services": [
+      {
+        "title": "Pain Management",
+        "description": "Effective therapies to manage and alleviate chronic pain."
+      },
+      {
+        "title": "Sports Injury",
+        "description": "Specialized treatments for athletes to recover quickly and safely."
+      },
+      {
+        "title": "Post-Surgery Rehab",
+        "description": "Comprehensive programs to help you bounce back after surgery."
+      }
+    ],
+    "contact": {
+      "phone": "+91 98765 43210",
+      "email": "contact@physiocare.demo",
+      "address": "Crossings Republik, Ghaziabad"
+    }
+  },
+  "playZonePage": {
+    "title": "Let's Play Zone - Kids Play Area & Game Zone",
+    "heroImage": "https://images.unsplash.com/photo-1560416345-0d0ddc1ee9ea?auto=format&fit=crop&q=80&w=1200",
+    "about": "Childhood is meant for playing as much as you can. Let's Play Zone is the happy place for your little ones to explore their fantasy world. We offer ample space with 30+ games, an attached cafe, and hygienic environment.",
+    "services": [
+      {
+        "title": "Birthday Parties",
+        "description": "Premium packages to make your child's birthday truly special."
+      },
+      {
+        "title": "Arcade Games",
+        "description": "A wide variety of arcade games for kids and adults alike."
+      },
+      {
+        "title": "Skill-building Workshops",
+        "description": "Activities like arts, crafts, singing, and storytelling."
+      }
+    ],
+    "contact": {
+      "phone": "+91 70144 97979",
+      "email": "celebration.houseofplay@gmail.com",
+      "address": "Big Bazar Circle, C-6, Vaishali Marg, Vaishali Nagar, Jaipur"
+    }
+  }
+}

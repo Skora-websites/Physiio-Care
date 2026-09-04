@@ -1,0 +1,132 @@
+.videos-gallery-section {
+    padding: 5rem 0;
+}
+
+.videos-gallery-section.doc-theme {
+    background-color: #f8fafc;
+}
+
+.videos-gallery-section.pz-theme {
+    background-color: #fffbf0;
+}
+
+.videos-gallery-section .section-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.videos-gallery-section .section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #64748b;
+}
+
+/* GRID */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .videos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* CARD */
+.video-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* VIDEO WRAPPER */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Full portrait video visible */
+    background: #000;
+    overflow: hidden;
+}
+
+/* VIDEO */
+.video-frame {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Full video visible */
+    background: #000;
+    display: block;
+    border: none;
+}
+
+/* PLACEHOLDER */
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+/* LINK */
+.video-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.video-link:hover {
+    color: #2563eb;
+}
+
+/* VIDEO INFO */
+.video-info {
+    padding: 1.25rem;
+}
+
+/* TITLE */
+.video-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    .video-wrapper {
+        height: 420px;
+    }
+
+    .video-title {
+        font-size: 1rem;
+    }
+}

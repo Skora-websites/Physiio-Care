@@ -1,0 +1,364 @@
+/* --- RESET TO BRIGHT, PROFESSIONAL THEME --- */
+.clinicTheme {
+  background-color: #ffffff;
+  color: #334155;
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  /* Ensure no background styles from index.css bleed through */
+  position: relative;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Typography --- */
+.sectionSubtitle {
+  color: #0369a1; /* Medical Blue */
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.sectionTitle span {
+  color: #0369a1;
+}
+
+.sectionHeaderCenter {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.underline {
+  height: 4px;
+  width: 60px;
+  background-color: #0369a1;
+  margin: 15px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* --- Clinic Navbar --- */
+.clinicNav {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navTop {
+  background: #0369a1;
+  color: white;
+  padding: 8px 0;
+  font-size: 0.85rem;
+}
+
+.topBarInner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0;
+}
+
+.logo span {
+  color: #0369a1;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #0369a1;
+}
+
+.navBtn {
+  background: #0369a1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navBtn:hover {
+  background: #0284c7;
+}
+
+/* --- Hero Section --- */
+.heroSection {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 100px 0;
+  border-bottom: 1px solid #bae6fd;
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+.badge {
+  display: inline-block;
+  background: #bae6fd;
+  color: #0369a1;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.heroContent h1 span {
+  color: #0369a1;
+}
+
+.heroContent p {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 15px;
+}
+
+.primaryBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0369a1;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #0369a1;
+  border: 2px solid #0369a1;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- Stats Banner --- */
+.statsSection {
+  margin-top: -40px; /* Pulls it up over the hero */
+  position: relative;
+  z-index: 10;
+}
+
+.statsGrid {
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.statBox {
+  text-align: center;
+  border-right: 1px solid #e2e8f0;
+}
+
+.statBox:last-child { border: none; }
+.statBox h3 { font-size: 2.2rem; color: #0369a1; font-weight: 900; margin-bottom: 5px; }
+.statBox p { color: #64748b; font-weight: 600; font-size: 0.9rem; }
+
+/* --- About Section --- */
+.aboutSection {
+  padding: 100px 0;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.aboutImagePlaceholder {
+  height: 400px;
+  background: #e0f2fe;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageOverlay {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.overlayIcon {
+  color: #0369a1;
+  margin-bottom: 10px;
+}
+
+.aboutText p {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.checkList {
+  list-style: none;
+  padding: 0;
+}
+
+.checkList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.checkIcon { color: #0369a1; }
+
+/* --- Services Section --- */
+.servicesSection {
+  background: #f8fafc;
+  padding: 100px 0;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.serviceCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  border-color: #bae6fd;
+}
+
+.serviceIcon {
+  color: #0369a1;
+  margin-bottom: 20px;
+}
+
+.serviceCard h3 { font-size: 1.4rem; color: #0f172a; margin-bottom: 15px; }
+.serviceCard p { color: #64748b; line-height: 1.6; }
+
+/* --- Clinic Footer --- */
+.clinicFooter {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 80px 0 0 0;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.footerCol p { line-height: 1.6; margin-bottom: 20px; }
+.footerCol h3 { color: white; font-size: 1.2rem; margin-bottom: 20px; }
+
+.socials { display: flex; gap: 15px; color: white; }
+
+.footerCol ul { list-style: none; padding: 0; }
+.footerCol ul li { margin-bottom: 12px; }
+.footerCol ul a { color: #cbd5e1; text-decoration: none; transition: color 0.3s; }
+.footerCol ul a:hover { color: #38bdf8; }
+
+.contactList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerBottom {
+  background: #020617;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.85rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .navLinks, .navBtn, .topBarInner { display: none; }
+  .statsGrid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .statBox { border: none; }
+  .aboutGrid, .servicesGrid, .footerGrid { grid-template-columns: 1fr; }
+  .heroContent h1 { font-size: 2.5rem; }
+}
