@@ -231,7 +231,7 @@ const HomePage = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/src/physio-care/assets/qr.png"
+                src="/images/qr.png"
                 alt="QR Code"
                 className={styles.qrCode}
               />
