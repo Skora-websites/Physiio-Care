@@ -1,0 +1,36 @@
+# ---------- Workspace / app state (never commit) ----------
+.freebuff/
+Physiio-Care/
+
+# ---------- Environment files & secrets ----------
+# .env and .env.* match at any depth (e.g. two-in-one-main/.env,
+# twoinone-backend-main/.env). Keep deploy/*.env.production.example
+# (a placeholder template, safe to share) — it is not matched here.
+.env
+.env.*
+*.env
+
+# Backend backup archive that contains a .env copy (secrets)
+backend.zip
+
+# ---------- Dependencies & builds ----------
+node_modules/
+dist/
+dist-ssr/
+coverage/
+
+# ---------- Logs ----------
+logs/
+*.log
+npm-debug.log*
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
